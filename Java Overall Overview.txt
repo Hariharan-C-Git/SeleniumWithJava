@@ -1,0 +1,462 @@
+Java:
+
+Java is a popular programming language, created in 1995.
+
+Uses of Java:
+
+It is used for to develop,
+Mobile applications (specially Android apps)
+Desktop applications
+Web applications
+Web servers and application servers
+Games
+Database connection
+
+Why Use Java?
+
+Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)
+It is one of the most popular programming language in the world
+It is easy to learn and simple to use
+It is open-source and free
+It is secure, fast and powerful
+Java is an object oriented language which gives a clear structure to programs and allows code to be reused, lowering development costs
+
+Java is case-sensitive: "MyClass" and "myclass" has different meaning.
+
+------------------------------
+Java Comments
+Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.
+
+Single-line Comments
+Single-line comments start with two forward slashes (//).
+
+Java Multi-line Comments
+Multi-line comments start with /* and ends with */.
+
+------------------------
+
+Variable:
+
+Variables are containers for storing data values.
+
+In Java, there are different types of variables, for example:
+
+String - stores text, such as "Hello". String values are surrounded by double quotes
+int - stores integers (whole numbers), without decimals, such as 123 or -123
+float - stores floating point numbers, with decimals, such as 19.99 or -19.99
+char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+boolean - stores values with two states: true or false
+
+
+Note that if you assign a new value to an existing variable, it will overwrite the previous value:
+
+int myNum = 15;
+myNum = 20;  // myNum is now 20
+System.out.println(myNum);
+
+Final Variables:
+
+However, you can add the final keyword if you don't want others (or yourself) to overwrite existing values (this will declare the variable as "final" or "constant", which means unchangeable and read-only):
+
+Display Variables:
+
+The println() method is often used to display variables.
+
+To combine both text and a variable, use the + character:
+
+String name = "John";
+System.out.println("Hello " + name);
+
+Declare Many Variables:
+
+To declare more than one variable of the same type, use a comma-separated list:
+
+int x = 5, y = 6, z = 50;
+System.out.println(x + y + z);
+
+
+Java Identifiers:
+
+All Java variables must be identified with unique names.
+
+These unique names are called identifiers.
+
+Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+
+Note: It is recommended to use descriptive names in order to create understandable and maintainable code:
+
+The general rules for naming variables are:
+
+Names can contain letters, digits, underscores, and dollar signs
+Names must begin with a letter
+Names should start with a lowercase letter and it cannot contain whitespace
+Names can also begin with $ and _ (but we will not use it in this tutorial)
+Names are case sensitive ("myVar" and "myvar" are different variables)
+Reserved words (like Java keywords, such as int or boolean) cannot be used as names
+------------------------------------
+
+
+Java Data Types:
+
+A variable in Java must be a specified with data type
+
+Data types are divided into two groups:
+
+Primitive data types - includes byte, short, int, long, float, double, boolean and char
+
+Non-primitive data types - such as String, Arrays and Classes
+
+A primitive data type specifies the size and type of variable values, and it has no additional methods.
+
+There are eight primitive data types in Java:
+
+Data Type	Size	Description
+byte		1 byte	Stores whole numbers from -128 to 127
+short		2 bytes	Stores whole numbers from -32,768 to 32,767
+int		4 bytes	Stores whole numbers from -2,147,483,648 to 2,147,483,647
+long		8 bytes	Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+float		4 bytes	Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
+double		8 bytes	Stores fractional numbers. Sufficient for storing 15 decimal digits
+boolean		1 bit	Stores true or false values
+char		2 bytes	Stores a single character/letter or ASCII values
+
+Primitive number types are divided into two groups:
+
+Integer types stores whole numbers, positive or negative (such as 123 or -456), without decimals. Valid types are byte, short, int and long. Which type you should use, depends on the numeric value.
+
+Floating point types represents numbers with a fractional part, containing one or more decimals. There are two types: float and double.
+
+The precision of float is only six or seven decimal digits, while double variables have a precision of about 15 digits. Therefore it is safer to use double for most calculations.
+
+The String type is so much used and integrated in Java, that some call it "the special ninth type".
+
+A String in Java is actually a non-primitive data type, because it refers to an object. The String object has methods that are used to perform certain operations on strings.
+
+Non-Primitive Data Types:
+
+Non-primitive data types are called reference types because they refer to objects.
+
+The main difference between primitive and non-primitive data types are:
+
+Primitive types are predefined (already defined) in Java. Non-primitive types are created by the programmer and is not defined by Java (except for String).
+Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.
+A primitive type has always a value, while non-primitive types can be null.
+A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.
+The size of a primitive type depends on the data type, while non-primitive types have all the same size.
+
+------------------------------------------
+
+Java Type Casting
+
+Type casting is when you assign a value of one primitive data type to another type.
+
+In Java, there are two types of casting:
+
+Widening Casting (automatically) - converting a smaller type to a larger type size
+byte -> short -> char -> int -> long -> float -> double
+
+Narrowing Casting (manually) - converting a larger type to a smaller size type
+double -> float -> long -> int -> char -> short -> byte
+Widening Casting
+Widening casting is done automatically when passing a smaller size type to a larger size type:
+
+Example
+public class Main {
+  public static void main(String[] args) {
+    int myInt = 9;
+    double myDouble = myInt; // Automatic casting: int to double
+
+    System.out.println(myInt);      // Outputs 9
+    System.out.println(myDouble);   // Outputs 9.0
+  }
+}
+
+Narrowing Casting:
+
+Narrowing casting must be done manually by placing the type in parentheses in front of the value:
+
+public class Main {
+  public static void main(String[] args) {
+    double myDouble = 9.78d;
+    int myInt = (int) myDouble; // Manual casting: double to int
+
+    System.out.println(myDouble);   // Outputs 9.78
+    System.out.println(myInt);      // Outputs 9
+  }
+}
+
+--------------------------
+
+Java Operators:
+
+Operators are used to perform operations on variables and values
+
+Java divides the operators into the following groups:
+
+Arithmetic operators
+Assignment operators
+Comparison operators
+Logical operators
+Bitwise operators
+
+Arithmetic Operators
+Arithmetic operators are used to perform common mathematical operations.
+
++
+-
+
+Java Assignment Operators
+Assignment operators are used to assign values to variables.
+
+=
++=
+
+Java Comparison Operators
+Comparison operators are used to compare two values:
+>
+<
+>=
+=<
+
+
+
+Java Logical Operators
+Logical operators are used to determine the logic between variables or values:
+
+&&
+||
+!
+-----------------------------------
+
+String Methods:
+
+The String class has a set of built-in methods that you can use on strings.
+charAt() - Returns the character at the specified index (position)
+compareTo() - Compares two strings lexicographically and it return 0 if its true or it will return 1
+compareToIgnoreCase()	Compares two strings lexicographically, ignoring case differences
+concat()	Appends a string to the end of another string
+contains()	Checks whether a string contains a sequence of characters
+endsWith()	Checks whether a string ends with the specified character(s)
+copyValueOf()	Returns a String that represents the characters of the character array
+indexOf()	Returns the position of the first found occurrence of specified characters in a string
+isEmpty()	Checks whether a string is empty or not
+replaceFirst()	Replaces the first occurrence of a substring that matches the given regular expression with the given replacement
+replaceAll()	Replaces each substring of this string that matches the given regular expression with the given replacement
+split()	Splits a string into an array of substrings
+startsWith()	Checks whether a string starts with specified characters
+substring()	Returns a new string which is the substring of a specified string
+toCharArray()	Converts this string to a new character array
+toLowerCase()	Converts a string to lower case letters
+toString()	Returns the value of a String object
+toUpperCase()	Converts a string to upper case letters
+trim()	Removes whitespace from both ends of a string
+valueOf()	Returns the string representation of the specified value
+--------------------------------------------
+
+Short Hand If...Else (Ternary Operator):
+
+There is also a short-hand if else, which is known as the ternary operator because it consists of three operands. It can be used to replace multiple lines of code with a single line. It is often used to replace simple if else statements:
+
+Syntax:
+
+variable = (condition) ? expressionTrue :  expressionFalse;
+
+int time = 20;
+String result = (time < 18) ? "Good day." : "Good evening.";
+System.out.println(result);
+
+-------------------------------------
+
+For-Each Loop
+There is also a "for-each" loop, which is used exclusively to loop through elements in an array:
+
+--------------------------------------
+
+Java Arrays:
+
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+
+To declare an array, define the variable type with square brackets:
+
+Ex:
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+
+Access the Elements of an Array:
+
+You access an array element by referring to the index number.
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars[0]);
+// Outputs Volvo
+
+
+Change an Array Element:
+
+To change the value of a specific element, refer to the index number:
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+cars[0] = "Opel";
+System.out.println(cars[0]);
+// Now outputs Opel instead of Volvo
+
+Array Length:
+
+To find out how many elements an array has, use the length property:
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars.length);
+// Outputs 4
+
+---------------------------------------
+
+Java Methods:
+
+A method is a block of code which only runs when it is called.
+
+Methods are used to perform certain actions, and they are also known as functions.
+
+Why use methods? To reuse code: define the code once, and use it many times.
+
+public class Main {
+  static void myMethod() {
+    // code to be executed
+  }
+}
+
+myMethod() is the name of the method
+static means that the method belongs to the Main class and not an object of the Main class. You will learn more about objects and how to access methods through objects later in this tutorial.
+void means that this method does not have a return value. You will learn more about return values later in this chapter
+
+----------------------------------------
+
+Java - What is OOP?
+OOP stands for Object-Oriented Programming.
+
+Procedural programming is about writing procedures or methods that perform operations on the data, while object-oriented programming is about creating objects that contain both data and methods.
+
+Object-oriented programming has several advantages over procedural programming:
+
+	OOP is faster and easier to execute
+	OOP provides a clear structure for the programs
+	OOP helps to keep the Java code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug	
+	OOP makes it possible to create full reusable applications with less code and shorter development time
+Tip: The "Don't Repeat Yourself" (DRY) principle is about reducing the repetition of code. You should extract out the codes that are common for the application, and place them at a single place and reuse them instead of repeating it.
+
+----------------------------------
+Constructor
+
+Constructor is a block of code that initializes the newly created object and it doesn’t have a return type. 
+
+The purpose of constructor is to initialize the object of a class while the purpose of a method is to perform a task by executing java code.
+Constructors cannot be abstract, final, static and synchronised while methods can be.
+Constructors do not have return types while methods do.
+
+------------------------------
+
+Access Modifiers - controls the access level
+Non-Access Modifiers - do not control access level, but provides other functionality
+
+Access Modifiers:
+
+public	The class is accessible by any other class
+default	The class is only accessible by classes in the same package.
+private	The code is only accessible within the declared class
+protected	The code is accessible in the same package and subclasses.
+
+Non-Access Modifiers 
+final	The class cannot be inherited by other classes
+final	Attributes and methods cannot be overridden/modified
+abstract	The class cannot be used to create objects (To access an abstract class, it must be inherited from another class.
+static	Attributes and methods belongs to the class, rather than an object
+
+Static
+A static method means that it can be accessed without creating an object of the class, unlike public:
+
+Final
+If you don't want the ability to override existing attribute values, declare attributes as final:
+
+Abstract
+An abstract method belongs to an abstract class, and it does not have a body. The body is provided by the subclass:
+
+---------------------------------------
+
+Encapsulation:
+
+Encapsulation, is to make sure that "sensitive" data is hidden from users
+
+
+To achieve this, you must:
+
+declare class variables/attributes as private
+provide public get and set methods to access and update the value of a private variable
+
+-------------------------------------
+
+Java Inheritance:
+
+it is possible to inherit attributes and methods from one class to another
+
+Why And When To Use "Inheritance"?
+
+It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.
+
+Single Inheritance - 
+
+one child class inherits all the methods and variables from parent class is called inheritance
+
+Multiple Inheritance:
+
+One child class inherits all the methods and variables from more than one parent class is called Multiple Ineritance
+
+Multilevel Inheritance:
+
+We can derive methods and variables from one class and this class will being inherited by another class
+
+
+Hierachical Inheritance:
+
+One class inherited by more than one sub classes
+
+hybrid inheritance:
+
+Its combination of single and hierarchical
+
+
+---------------------------
+
+Polymorphism:
+
+Polymorphism allows us to perform a single action in different ways. The word “poly” means many and “morphs” means forms, So it means many forms.
+
+Types of polymorphism:
+
+Compile-time Polymorphism
+Runtime Polymorphism
+
+Type 1: Compile-time polymorphism
+
+It is also known as static polymorphism. This type of polymorphism is achieved by function overloading or operator overloading. 
+
+Note: But Java doesn’t support the Operator Overloading.
+
+Method Overloading: When there are multiple functions with the same name but different parameters then these functions are said to be overloaded. Functions can be overloaded by change in the number of arguments or/and a change in the type of arguments.
+
+Type 2: Runtime polymorphism
+
+It is also known as Dynamic Method Dispatch. It is a process in which a function call to the overridden method is resolved at Runtime. This type of polymorphism is achieved by Method Overriding. Method overriding, on the other hand, occurs when a derived class has a definition for one of the member functions of the base class. That base function is said to be overridden.
+
+-----------------------------------------
+What is Exception in Java?:
+
+Dictionary Meaning: Exception is an abnormal condition.
+
+In Java, an exception is an event that disrupts the normal flow of the program. It is an object which is thrown at runtime.
+
+What is Exception Handling?
+Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.
+
+Advantage of Exception Handling
+The core advantage of exception handling is to maintain the normal flow of the application. An exception normally disrupts the normal flow of the application; that is why we need to handle exceptions.
+
+
+ 
